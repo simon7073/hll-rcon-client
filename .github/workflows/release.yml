@@ -62,4 +62,33 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: dist/*
-          generate_release_notes: true
+          body: |
+            ## What's New
+
+            ### Layer 0 — Core (`core/`)
+            - TCP transport with auto-reconnect
+            - HLL RCONv2 packet framing & XOR encryption
+            - SSRF protection (RFC 1918 / loopback / link-local blocked)
+
+            ### Layer 1 — RCON Client (`rcon/`)
+            - Connection pool with circuit breaker
+            - Error classification (retryable / fatal / auth)
+            - Exponential backoff with jitter
+
+            ### Layer 2 — CLI (`cmd/rcon-cli/`)
+            - `discover` — auto-discover RCON command schema
+            - `exec` — execute single command
+            - `batch` — batch execute from file
+            - `ping` — connection diagnostics
+            - `repl` — interactive REPL mode
+
+            ### Layer 3 — HTTP Proxy (`cmd/rcon-proxy/`)
+            - RESTful API for cross-language access
+            - Token-based authentication
+            - Request rate limiting
+
+            ### Tooling
+            - `verify_layers` — integration test suite for all layers
+            - GitHub Actions CI: multi-platform build (Linux / Windows / macOS × amd64 / arm64)
+
+            **Full Changelog**: https://github.com/simon7073/hll-rcon-client/blob/main/CHANGELOG.md
