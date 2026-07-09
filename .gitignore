@@ -1,0 +1,25 @@
+# Compiled binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Build output directories
+bin/
+dist/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS artifacts
+nul
+debug.log
+.DS_Store
+Thumbs.db

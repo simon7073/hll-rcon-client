@@ -1,0 +1,1842 @@
+{
+  "generatedAt": "2026-06-21T09:50:00Z",
+  "serverName": "[HLL Server]",
+  "commands": [
+    {
+      "command": "AddAdmin",
+      "friendlyName": "Add Admin",
+      "description": "添加管理员，需指定玩家ID、管理员组和备注",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Player Id",
+          "description": ""
+        },
+        {
+          "id": "AdminGroup",
+          "name": "Admin Group",
+          "description": "",
+          "values": [
+            "owner",
+            "senior",
+            "junior",
+            "spectator"
+          ]
+        },
+        {
+          "id": "Comment",
+          "name": "Comment",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "AddAdmin",
+        "text": "Add Admin",
+        "description": "Add a player to the admin list.",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Player Id",
+            "description": ""
+          },
+          {
+            "iD": "AdminGroup",
+            "name": "Admin Group",
+            "description": "",
+            "displayMember": "owner,senior,junior,spectator",
+            "valueMember": "owner,senior,junior,spectator"
+          },
+          {
+            "iD": "Comment",
+            "name": "Comment",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "AddBannedWords",
+      "friendlyName": "Add Banned Words",
+      "description": "向脏话过滤器添加敏感词，多个词用英文逗号分隔",
+      "parameters": [
+        {
+          "id": "BannedWords",
+          "name": "Banned Words",
+          "description": "",
+          "constraints": {
+            "hint": "多个词用英文逗号分隔；发送后等待 1-8s 响应"
+          }
+        }
+      ],
+      "raw": {
+        "name": "AddBannedWords",
+        "text": "Add Banned Words",
+        "description": "Add banned words to the profanity filter. Separate words with commas.",
+        "dialogueParameters": [
+          {
+            "iD": "BannedWords",
+            "name": "Banned Words",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "AddMapToRotation",
+      "friendlyName": "Add Map to Rotation",
+      "description": "在地图轮换列表的指定位置添加新地图",
+      "parameters": [
+        {
+          "id": "MapName",
+          "name": "Map Name",
+          "description": "",
+          "values": [
+            "foy_warfare",
+            "stmariedumont_warfare",
+            "hurtgenforest_warfare_V2",
+            "utahbeach_warfare",
+            "stmereeglise_warfare",
+            "hill400_warfare",
+            "carentan_warfare",
+            "kursk_warfare",
+            "foy_warfare_night",
+            "hurtgenforest_warfare_V2_night",
+            "kursk_warfare_night",
+            "omahabeach_warfare",
+            "kharkov_warfare",
+            "elalamein_warfare",
+            "driel_warfare",
+            "carentan_warfare_night",
+            "stmereeglise_warfare_night",
+            "driel_warfare_night",
+            "elalamein_warfare_night",
+            "kharkov_warfare_night",
+            "mortain_warfare_day",
+            "mortain_warfare_overcast",
+            "stmariedumont_warfare_night",
+            "utahbeach_warfare_night",
+            "omahabeach_warfare_night",
+            "mortain_warfare_dusk",
+            "PHL_L_1944_Warfare",
+            "PHL_L_1944_Warfare_Night",
+            "elsenbornridge_warfare_day",
+            "elsenbornridge_warfare_morning",
+            "elsenbornridge_warfare_night",
+            "tobruk_warfare_day",
+            "tobruk_warfare_dusk",
+            "tobruk_warfare_morning",
+            "STA_L_1942_Warfare",
+            "STA_L_1942_Warfare_Night",
+            "smolensk_warfare_day",
+            "smolensk_warfare_dusk",
+            "smolensk_warfare_night",
+            "junobeach_warfare_day",
+            "junobeach_warfare_morning",
+            "junobeach_warfare_night",
+            "REM_L_1945_Warfare",
+            "REM_L_1945_WarfareNight",
+            "utahbeach_offensive_us",
+            "utahbeach_offensive_ger",
+            "omahabeach_offensive_us",
+            "stmereeglise_offensive_ger",
+            "foy_offensive_ger",
+            "hill400_offensive_US",
+            "stmereeglise_offensive_us",
+            "carentan_offensive_us",
+            "hurtgenforest_offensive_ger",
+            "hurtgenforest_offensive_US",
+            "kursk_offensive_ger",
+            "kursk_offensive_rus",
+            "stmariedumont_off_us",
+            "stmariedumont_off_ger",
+            "carentan_offensive_ger",
+            "foy_offensive_us",
+            "hill400_offensive_ger",
+            "omahabeach_offensive_ger",
+            "kharkov_offensive_rus",
+            "kharkov_offensive_ger",
+            "elalamein_offensive_CW",
+            "elalamein_offensive_ger",
+            "driel_offensive_ger",
+            "driel_offensive_us",
+            "mortain_offensiveger_day",
+            "mortain_offensiveger_overcast",
+            "mortain_offensiveUS_day",
+            "mortain_offensiveUS_overcast",
+            "mortain_offensiveUS_dusk",
+            "mortain_offensiveger_dusk",
+            "PHL_L_1944_OffensiveGER",
+            "PHL_L_1944_OffensiveUS",
+            "elsenbornridge_offensiveUS_day",
+            "elsenbornridge_offensiveger_day",
+            "elsenbornridge_offensiveUS_morning",
+            "elsenbornridge_offensiveger_morning",
+            "elsenbornridge_offensiveUS_night",
+            "elsenbornridge_offensiveger_night",
+            "tobruk_offensivebritish_day",
+            "tobruk_offensiveger_day",
+            "tobruk_offensivebritish_dusk",
+            "tobruk_offensiveger_dusk",
+            "tobruk_offensivebritish_morning",
+            "tobruk_offensiveger_morning",
+            "STA_L_1942_OffensiveRUS",
+            "STA_L_1942_OffensiveGER",
+            "smolensk_offensiveGer_Day",
+            "smolensk_offensiveRus_day",
+            "smolensk_offensiveGer_dusk",
+            "smolensk_offensiveRus_dusk",
+            "smolensk_offensiveGer_night",
+            "smolensk_offensiveRus_night",
+            "junobeach_offensiveger_day",
+            "junobeach_offensiveger_morning",
+            "junobeach_offensiveger_night",
+            "junobeach_offensivecan_day",
+            "junobeach_offensivecan_morning",
+            "junobeach_offensivecan_night",
+            "REM_L_1945_OffensiveUS",
+            "REM_L_1945_OffensiveGER",
+            "ELA_S_1942_P_Skirmish",
+            "ELA_S_1942_Night_P_Skirmish",
+            "DRL_S_1944_P_Skirmish",
+            "DRL_S_1944_Night_P_Skirmish",
+            "DRL_S_1944_Day_P_Skirmish",
+            "mortain_skirmish_day",
+            "mortain_skirmish_overcast",
+            "SMDM_S_1944_Day_P_Skirmish",
+            "SMDM_S_1944_Night_P_Skirmish",
+            "SMDM_S_1944_Rain_P_Skirmish",
+            "CAR_S_1944_Day_P_Skirmish",
+            "CAR_S_1944_Rain_P_Skirmish",
+            "CAR_S_1944_Dusk_P_Skirmish",
+            "SME_S_1944_Day_P_Skirmish",
+            "SME_S_1944_Morning_P_Skirmish",
+            "SME_S_1944_Night_P_Skirmish",
+            "mortain_skirmish_dusk",
+            "PHL_S_1944_Rain_P_Skirmish",
+            "PHL_S_1944_Morning_P_Skirmish",
+            "PHL_S_1944_Night_P_Skirmish",
+            "HIL_S_1944_Day_P_Skirmish",
+            "HIL_S_1944_Dusk_P_Skirmish",
+            "elsenbornridge_skirmish_day",
+            "elsenbornridge_skirmish_morning",
+            "elsenbornridge_skirmish_night",
+            "tobruk_skirmish_day",
+            "tobruk_skirmish_dusk",
+            "tobruk_skirmish_morning",
+            "STA_S_1942_P_Skirmish_Dusk",
+            "STA_S_1942_P_Skirmish_Overcast",
+            "smolensk_skirmish_day",
+            "smolensk_skirmish_dusk",
+            "smolensk_skirmish_night",
+            "junobeach_skirmish_day",
+            "junobeach_skirmish_morning",
+            "junobeach_skirmish_night",
+            "REM_S_1945_P_Skirmish_Day",
+            "REM_S_1945_P_Skirmish_Night"
+          ]
+        },
+        {
+          "id": "Index",
+          "name": "At Index",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "AddMapToRotation",
+        "text": "Add Map to Rotation",
+        "description": "Add a new map to the map rotation at an index.",
+        "dialogueParameters": [
+          {
+            "iD": "MapName",
+            "name": "Map Name",
+            "description": "",
+            "displayMember": "foy_warfare,stmariedumont_warfare,hurtgenforest_warfare_V2,utahbeach_warfare,stmereeglise_warfare,hill400_warfare,carentan_warfare,kursk_warfare,foy_warfare_night,hurtgenforest_warfare_V2_night,kursk_warfare_night,omahabeach_warfare,kharkov_warfare,elalamein_warfare,driel_warfare,carentan_warfare_night,stmereeglise_warfare_night,driel_warfare_night,elalamein_warfare_night,kharkov_warfare_night,mortain_warfare_day,mortain_warfare_overcast,stmariedumont_warfare_night,utahbeach_warfare_night,omahabeach_warfare_night,mortain_warfare_dusk,PHL_L_1944_Warfare,PHL_L_1944_Warfare_Night,elsenbornridge_warfare_day,elsenbornridge_warfare_morning,elsenbornridge_warfare_night,tobruk_warfare_day,tobruk_warfare_dusk,tobruk_warfare_morning,STA_L_1942_Warfare,STA_L_1942_Warfare_Night,smolensk_warfare_day,smolensk_warfare_dusk,smolensk_warfare_night,junobeach_warfare_day,junobeach_warfare_morning,junobeach_warfare_night,REM_L_1945_Warfare,REM_L_1945_WarfareNight,utahbeach_offensive_us,utahbeach_offensive_ger,omahabeach_offensive_us,stmereeglise_offensive_ger,foy_offensive_ger,hill400_offensive_US,stmereeglise_offensive_us,carentan_offensive_us,hurtgenforest_offensive_ger,hurtgenforest_offensive_US,kursk_offensive_ger,kursk_offensive_rus,stmariedumont_off_us,stmariedumont_off_ger,carentan_offensive_ger,foy_offensive_us,hill400_offensive_ger,omahabeach_offensive_ger,kharkov_offensive_rus,kharkov_offensive_ger,elalamein_offensive_CW,elalamein_offensive_ger,driel_offensive_ger,driel_offensive_us,mortain_offensiveger_day,mortain_offensiveger_overcast,mortain_offensiveUS_day,mortain_offensiveUS_overcast,mortain_offensiveUS_dusk,mortain_offensiveger_dusk,PHL_L_1944_OffensiveGER,PHL_L_1944_OffensiveUS,elsenbornridge_offensiveUS_day,elsenbornridge_offensiveger_day,elsenbornridge_offensiveUS_morning,elsenbornridge_offensiveger_morning,elsenbornridge_offensiveUS_night,elsenbornridge_offensiveger_night,tobruk_offensivebritish_day,tobruk_offensiveger_day,tobruk_offensivebritish_dusk,tobruk_offensiveger_dusk,tobruk_offensivebritish_morning,tobruk_offensiveger_morning,STA_L_1942_OffensiveRUS,STA_L_1942_OffensiveGER,smolensk_offensiveGer_Day,smolensk_offensiveRus_day,smolensk_offensiveGer_dusk,smolensk_offensiveRus_dusk,smolensk_offensiveGer_night,smolensk_offensiveRus_night,junobeach_offensiveger_day,junobeach_offensiveger_morning,junobeach_offensiveger_night,junobeach_offensivecan_day,junobeach_offensivecan_morning,junobeach_offensivecan_night,REM_L_1945_OffensiveUS,REM_L_1945_OffensiveGER,ELA_S_1942_P_Skirmish,ELA_S_1942_Night_P_Skirmish,DRL_S_1944_P_Skirmish,DRL_S_1944_Night_P_Skirmish,DRL_S_1944_Day_P_Skirmish,mortain_skirmish_day,mortain_skirmish_overcast,SMDM_S_1944_Day_P_Skirmish,SMDM_S_1944_Night_P_Skirmish,SMDM_S_1944_Rain_P_Skirmish,CAR_S_1944_Day_P_Skirmish,CAR_S_1944_Rain_P_Skirmish,CAR_S_1944_Dusk_P_Skirmish,SME_S_1944_Day_P_Skirmish,SME_S_1944_Morning_P_Skirmish,SME_S_1944_Night_P_Skirmish,mortain_skirmish_dusk,PHL_S_1944_Rain_P_Skirmish,PHL_S_1944_Morning_P_Skirmish,PHL_S_1944_Night_P_Skirmish,HIL_S_1944_Day_P_Skirmish,HIL_S_1944_Dusk_P_Skirmish,elsenbornridge_skirmish_day,elsenbornridge_skirmish_morning,elsenbornridge_skirmish_night,tobruk_skirmish_day,tobruk_skirmish_dusk,tobruk_skirmish_morning,STA_S_1942_P_Skirmish_Dusk,STA_S_1942_P_Skirmish_Overcast,smolensk_skirmish_day,smolensk_skirmish_dusk,smolensk_skirmish_night,junobeach_skirmish_day,junobeach_skirmish_morning,junobeach_skirmish_night,REM_S_1945_P_Skirmish_Day,REM_S_1945_P_Skirmish_Night",
+            "valueMember": "foy_warfare,stmariedumont_warfare,hurtgenforest_warfare_V2,utahbeach_warfare,stmereeglise_warfare,hill400_warfare,carentan_warfare,kursk_warfare,foy_warfare_night,hurtgenforest_warfare_V2_night,kursk_warfare_night,omahabeach_warfare,kharkov_warfare,elalamein_warfare,driel_warfare,carentan_warfare_night,stmereeglise_warfare_night,driel_warfare_night,elalamein_warfare_night,kharkov_warfare_night,mortain_warfare_day,mortain_warfare_overcast,stmariedumont_warfare_night,utahbeach_warfare_night,omahabeach_warfare_night,mortain_warfare_dusk,PHL_L_1944_Warfare,PHL_L_1944_Warfare_Night,elsenbornridge_warfare_day,elsenbornridge_warfare_morning,elsenbornridge_warfare_night,tobruk_warfare_day,tobruk_warfare_dusk,tobruk_warfare_morning,STA_L_1942_Warfare,STA_L_1942_Warfare_Night,smolensk_warfare_day,smolensk_warfare_dusk,smolensk_warfare_night,junobeach_warfare_day,junobeach_warfare_morning,junobeach_warfare_night,REM_L_1945_Warfare,REM_L_1945_WarfareNight,utahbeach_offensive_us,utahbeach_offensive_ger,omahabeach_offensive_us,stmereeglise_offensive_ger,foy_offensive_ger,hill400_offensive_US,stmereeglise_offensive_us,carentan_offensive_us,hurtgenforest_offensive_ger,hurtgenforest_offensive_US,kursk_offensive_ger,kursk_offensive_rus,stmariedumont_off_us,stmariedumont_off_ger,carentan_offensive_ger,foy_offensive_us,hill400_offensive_ger,omahabeach_offensive_ger,kharkov_offensive_rus,kharkov_offensive_ger,elalamein_offensive_CW,elalamein_offensive_ger,driel_offensive_ger,driel_offensive_us,mortain_offensiveger_day,mortain_offensiveger_overcast,mortain_offensiveUS_day,mortain_offensiveUS_overcast,mortain_offensiveUS_dusk,mortain_offensiveger_dusk,PHL_L_1944_OffensiveGER,PHL_L_1944_OffensiveUS,elsenbornridge_offensiveUS_day,elsenbornridge_offensiveger_day,elsenbornridge_offensiveUS_morning,elsenbornridge_offensiveger_morning,elsenbornridge_offensiveUS_night,elsenbornridge_offensiveger_night,tobruk_offensivebritish_day,tobruk_offensiveger_day,tobruk_offensivebritish_dusk,tobruk_offensiveger_dusk,tobruk_offensivebritish_morning,tobruk_offensiveger_morning,STA_L_1942_OffensiveRUS,STA_L_1942_OffensiveGER,smolensk_offensiveGer_Day,smolensk_offensiveRus_day,smolensk_offensiveGer_dusk,smolensk_offensiveRus_dusk,smolensk_offensiveGer_night,smolensk_offensiveRus_night,junobeach_offensiveger_day,junobeach_offensiveger_morning,junobeach_offensiveger_night,junobeach_offensivecan_day,junobeach_offensivecan_morning,junobeach_offensivecan_night,REM_L_1945_OffensiveUS,REM_L_1945_OffensiveGER,ELA_S_1942_P_Skirmish,ELA_S_1942_Night_P_Skirmish,DRL_S_1944_P_Skirmish,DRL_S_1944_Night_P_Skirmish,DRL_S_1944_Day_P_Skirmish,mortain_skirmish_day,mortain_skirmish_overcast,SMDM_S_1944_Day_P_Skirmish,SMDM_S_1944_Night_P_Skirmish,SMDM_S_1944_Rain_P_Skirmish,CAR_S_1944_Day_P_Skirmish,CAR_S_1944_Rain_P_Skirmish,CAR_S_1944_Dusk_P_Skirmish,SME_S_1944_Day_P_Skirmish,SME_S_1944_Morning_P_Skirmish,SME_S_1944_Night_P_Skirmish,mortain_skirmish_dusk,PHL_S_1944_Rain_P_Skirmish,PHL_S_1944_Morning_P_Skirmish,PHL_S_1944_Night_P_Skirmish,HIL_S_1944_Day_P_Skirmish,HIL_S_1944_Dusk_P_Skirmish,elsenbornridge_skirmish_day,elsenbornridge_skirmish_morning,elsenbornridge_skirmish_night,tobruk_skirmish_day,tobruk_skirmish_dusk,tobruk_skirmish_morning,STA_S_1942_P_Skirmish_Dusk,STA_S_1942_P_Skirmish_Overcast,smolensk_skirmish_day,smolensk_skirmish_dusk,smolensk_skirmish_night,junobeach_skirmish_day,junobeach_skirmish_morning,junobeach_skirmish_night,REM_S_1945_P_Skirmish_Day,REM_S_1945_P_Skirmish_Night"
+          },
+          {
+            "iD": "Index",
+            "name": "At Index",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "AddMapToSequence",
+      "friendlyName": "Add Map to Sequence",
+      "description": "向服务器地图播放队列添加地图",
+      "parameters": [
+        {
+          "id": "MapName",
+          "name": "Map Name",
+          "description": "",
+          "values": [
+            "hurtgenforest_warfare_V2",
+            "stmariedumont_warfare",
+            "foy_warfare",
+            "utahbeach_warfare",
+            "stmereeglise_warfare",
+            "hill400_warfare",
+            "carentan_warfare",
+            "kursk_warfare",
+            "omahabeach_warfare",
+            "driel_warfare",
+            "elalamein_warfare"
+          ]
+        },
+        {
+          "id": "Index",
+          "name": "At Index",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "AddMapToSequence",
+        "text": "Add Map to Sequence",
+        "description": "Add map to server map sequence.",
+        "dialogueParameters": [
+          {
+            "iD": "MapName",
+            "name": "Map Name",
+            "description": "",
+            "displayMember": "hurtgenforest_warfare_V2,stmariedumont_warfare,foy_warfare,utahbeach_warfare,stmereeglise_warfare,hill400_warfare,carentan_warfare,kursk_warfare,omahabeach_warfare,driel_warfare,elalamein_warfare",
+            "valueMember": "hurtgenforest_warfare_V2,stmariedumont_warfare,foy_warfare,utahbeach_warfare,stmereeglise_warfare,hill400_warfare,carentan_warfare,kursk_warfare,omahabeach_warfare,driel_warfare,elalamein_warfare"
+          },
+          {
+            "iD": "Index",
+            "name": "At Index",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "AddVip",
+      "friendlyName": "Add VIP",
+      "description": "为指定玩家添加 VIP 身份",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Player ID",
+          "description": ""
+        },
+        {
+          "id": "Description",
+          "name": "Description",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "AddVip",
+        "text": "Add VIP",
+        "description": "Give a player VIP status.",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Player ID",
+            "description": ""
+          },
+          {
+            "iD": "Description",
+            "name": "Description",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "ChangeMap",
+      "friendlyName": "Change Map",
+      "description": "切换服务器当前地图",
+      "parameters": [
+        {
+          "id": "MapName",
+          "name": "MapName",
+          "description": "",
+          "values": [
+            "hurtgenforest_warfare_V2",
+            "stmariedumont_warfare",
+            "foy_warfare",
+            "utahbeach_warfare",
+            "stmereeglise_warfare",
+            "hill400_warfare",
+            "carentan_warfare",
+            "kursk_warfare",
+            "omahabeach_warfare",
+            "driel_warfare",
+            "elalamein_warfare"
+          ],
+          "constraints": {
+            "hint": "切换会导致 60s 等待和当前比赛中断"
+          }
+        }
+      ],
+      "raw": {
+        "name": "ChangeMap",
+        "text": "Change Map",
+        "description": "Select a map to change the server map.",
+        "dialogueParameters": [
+          {
+            "iD": "MapName",
+            "name": "MapName",
+            "description": "",
+            "displayMember": "hurtgenforest_warfare_V2,stmariedumont_warfare,foy_warfare,utahbeach_warfare,stmereeglise_warfare,hill400_warfare,carentan_warfare,kursk_warfare,omahabeach_warfare,driel_warfare,elalamein_warfare",
+            "valueMember": "hurtgenforest_warfare_V2,stmariedumont_warfare,foy_warfare,utahbeach_warfare,stmereeglise_warfare,hill400_warfare,carentan_warfare,kursk_warfare,omahabeach_warfare,driel_warfare,elalamein_warfare"
+          }
+        ]
+      }
+    },
+    {
+      "command": "DisbandPlatoon",
+      "friendlyName": "Disband Platoon",
+      "description": "解散指定小队，强制小队成员重新部署",
+      "parameters": [
+        {
+          "id": "TeamIndex",
+          "name": "Team",
+          "description": "",
+          "values": [
+            "1",
+            "2"
+          ],
+          "constraints": {
+            "values": [
+              "1",
+              "2"
+            ],
+            "hint": "1=Allies, 2=Axis"
+          }
+        },
+        {
+          "id": "SquadIndex",
+          "name": "Platoon Index",
+          "description": ""
+        },
+        {
+          "id": "Reason",
+          "name": "Reason",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "DisbandPlatoon",
+        "text": "Disband Platoon",
+        "description": "Disband a squad and force players within the platoon to redeploy.",
+        "dialogueParameters": [
+          {
+            "iD": "TeamIndex",
+            "name": "Team",
+            "description": "",
+            "displayMember": "Axis,Allies",
+            "valueMember": "1,2"
+          },
+          {
+            "iD": "SquadIndex",
+            "name": "Platoon Index",
+            "description": ""
+          },
+          {
+            "iD": "Reason",
+            "name": "Reason",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "ForceTeamSwitch",
+      "friendlyName": "Force Team Switch",
+      "description": "强制指定玩家切换到对方阵营",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Players",
+          "description": ""
+        },
+        {
+          "id": "ForceMode",
+          "name": "Force Mode",
+          "description": "",
+          "values": [
+            "0",
+            "1"
+          ],
+          "constraints": {
+            "values": [
+              "0",
+              "1"
+            ],
+            "hint": "0=切到对方阵营, 1=切到指定阵营"
+          }
+        }
+      ],
+      "raw": {
+        "name": "ForceTeamSwitch",
+        "text": "Force Team Switch",
+        "description": "Forces a player to switch teams.",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Players",
+            "description": "",
+            "displayMember": "PlayerName",
+            "valueMember": "00000000000000000"
+          },
+          {
+            "iD": "ForceMode",
+            "name": "Force Mode",
+            "description": "",
+            "displayMember": "OnDeath,Immediate",
+            "valueMember": "0,1"
+          }
+        ]
+      }
+    },
+    {
+      "command": "GetAdminGroups",
+      "friendlyName": "Get Admin Groups",
+      "description": "获取所有管理员用户组列表",
+      "parameters": null,
+      "raw": {
+        "name": "GetAdminGroups",
+        "text": "Get Admin Groups",
+        "description": "Get a list of admin user groups."
+      }
+    },
+    {
+      "command": "GetAdminLog",
+      "friendlyName": "Get Admin Log",
+      "description": "获取管理员操作日志",
+      "parameters": null,
+      "raw": {
+        "name": "GetAdminLog",
+        "text": "Get Admin Log",
+        "description": "Retrieve admin log."
+      }
+    },
+    {
+      "command": "GetAdminUsers",
+      "friendlyName": "Get Admin Users",
+      "description": "获取所有管理员用户列表",
+      "parameters": null,
+      "raw": {
+        "name": "GetAdminUsers",
+        "text": "Get Admin Users",
+        "description": "Get a list of admin users."
+      }
+    },
+    {
+      "command": "GetAutoBalanceEnabled",
+      "friendlyName": "Get Auto Balance Enabled",
+      "description": "查询自动平衡是否已启用",
+      "parameters": null,
+      "raw": {
+        "name": "GetAutoBalanceEnabled",
+        "text": "Get Auto Balance Enabled",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetAutoBalanceThreshold",
+      "friendlyName": "Get Auto Balance Threshold",
+      "description": "查询自动平衡触发的人数差值阈值",
+      "parameters": null,
+      "raw": {
+        "name": "GetAutoBalanceThreshold",
+        "text": "Get Auto Balance Threshold",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetClientReferenceData",
+      "friendlyName": "None",
+      "description": "获取指定命令的参数元数据（名称、类型、枚举值）",
+      "parameters": null,
+      "raw": {
+        "name": "GetClientReferenceData",
+        "text": "None",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetDisplayableCommands",
+      "friendlyName": "None",
+      "description": "获取所有可用的 RCON 命令列表",
+      "parameters": null,
+      "raw": {
+        "name": "GetDisplayableCommands",
+        "text": "None",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetHighPingThreshold",
+      "friendlyName": "Get High Ping Threshold",
+      "description": "查询高延迟踢人阈值（毫秒）",
+      "parameters": null,
+      "raw": {
+        "name": "GetHighPingThreshold",
+        "text": "Get High Ping Threshold",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetKickIdleDuration",
+      "friendlyName": "Get Kick Idle Duration",
+      "description": "查询挂机踢人等待时长（分钟）",
+      "parameters": null,
+      "raw": {
+        "name": "GetKickIdleDuration",
+        "text": "Get Kick Idle Duration",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetMapShuffleEnabled",
+      "friendlyName": "Get Map Shuffle Enabled",
+      "description": "查询地图队列随机排序是否已启用",
+      "parameters": null,
+      "raw": {
+        "name": "GetMapShuffleEnabled",
+        "text": "Get Map Shuffle Enabled",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetPermanentBans",
+      "friendlyName": "Get Permanent Bans",
+      "description": "获取所有永久封禁玩家列表",
+      "parameters": null,
+      "raw": {
+        "name": "GetPermanentBans",
+        "text": "Get Permanent Bans",
+        "description": "Retrieve a list of players who have a permanent ban."
+      }
+    },
+    {
+      "command": "GetServerChangelist",
+      "friendlyName": "Get Server Changelist",
+      "description": "查询服务器版本号（Changelist）",
+      "parameters": null,
+      "raw": {
+        "name": "GetServerChangelist",
+        "text": "Get Server Changelist",
+        "description": "Retrieves the servers changelist number."
+      }
+    },
+    {
+      "command": "GetServerInformation",
+      "friendlyName": "Get Server Information",
+      "description": "查询服务器综合信息（会话、玩家列表、地图轮换、地图队列）",
+      "parameters": null,
+      "raw": {
+        "name": "GetServerInformation",
+        "text": "Get Server Information",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetTeamSwitchCooldown",
+      "friendlyName": "Get Team Switch Cooldown",
+      "description": "查询换队冷却时间",
+      "parameters": null,
+      "raw": {
+        "name": "GetTeamSwitchCooldown",
+        "text": "Get Team Switch Cooldown",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetTemporaryBans",
+      "friendlyName": "Get Temporary Bans",
+      "description": "获取所有临时封禁玩家列表",
+      "parameters": null,
+      "raw": {
+        "name": "GetTemporaryBans",
+        "text": "Get Temporary Bans",
+        "description": "Retrieve a list of players who have temporary bans."
+      }
+    },
+    {
+      "command": "GetVoteKickEnabled",
+      "friendlyName": "Get Vote Kick Enabled",
+      "description": "查询投票踢人功能是否已启用",
+      "parameters": null,
+      "raw": {
+        "name": "GetVoteKickEnabled",
+        "text": "Get Vote Kick Enabled",
+        "description": "None"
+      }
+    },
+    {
+      "command": "GetVoteKickThreshold",
+      "friendlyName": "Get Vote Kick Threshold",
+      "description": "查询投票踢人的通过阈值",
+      "parameters": null,
+      "raw": {
+        "name": "GetVoteKickThreshold",
+        "text": "Get Vote Kick Threshold",
+        "description": "None"
+      }
+    },
+    {
+      "command": "KickPlayer",
+      "friendlyName": "Kick Player",
+      "description": "踢出指定玩家并记录原因",
+      "parameters": [
+        {
+          "id": "Reason",
+          "name": "Reason",
+          "description": ""
+        },
+        {
+          "id": "PlayerId",
+          "name": "Player",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "KickPlayer",
+        "text": "Kick Player",
+        "description": "Select player to kick and add a reason.",
+        "dialogueParameters": [
+          {
+            "iD": "Reason",
+            "name": "Reason",
+            "description": ""
+          },
+          {
+            "iD": "PlayerId",
+            "name": "Player",
+            "description": "",
+            "displayMember": "PlayerName",
+            "valueMember": "00000000000000000"
+          }
+        ]
+      }
+    },
+    {
+      "command": "MessageAllPlayers",
+      "friendlyName": "Message All Players",
+      "description": "向所有在线玩家发送全屏消息",
+      "parameters": [
+        {
+          "id": "Message",
+          "name": "Message",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "MessageAllPlayers",
+        "text": "Message All Players",
+        "description": "Create a message to send to all players in game.",
+        "dialogueParameters": [
+          {
+            "iD": "Message",
+            "name": "Message",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "MessagePlayer",
+      "friendlyName": "Message Player",
+      "description": "向指定玩家发送私密消息",
+      "parameters": [
+        {
+          "id": "Message",
+          "name": "Message",
+          "description": ""
+        },
+        {
+          "id": "PlayerId",
+          "name": "Player",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "MessagePlayer",
+        "text": "Message Player",
+        "description": "Create a message to send to a player in game.",
+        "dialogueParameters": [
+          {
+            "iD": "Message",
+            "name": "Message",
+            "description": ""
+          },
+          {
+            "iD": "PlayerId",
+            "name": "Player",
+            "description": "",
+            "displayMember": "PlayerName",
+            "valueMember": "00000000000000000"
+          }
+        ]
+      }
+    },
+    {
+      "command": "MoveMapInSequence",
+      "friendlyName": "Move Map in Sequence",
+      "description": "调整地图在播放队列中的位置",
+      "parameters": [
+        {
+          "id": "CurrentIndex",
+          "name": "From",
+          "description": ""
+        },
+        {
+          "id": "NewIndex",
+          "name": "To",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "MoveMapInSequence",
+        "text": "Move Map in Sequence",
+        "description": "Change the position on a map in the server queue",
+        "dialogueParameters": [
+          {
+            "iD": "CurrentIndex",
+            "name": "From",
+            "description": ""
+          },
+          {
+            "iD": "NewIndex",
+            "name": "To",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "PermanentBanPlayer",
+      "friendlyName": "Permanently Ban Player",
+      "description": "永久封禁指定玩家",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Players",
+          "description": ""
+        },
+        {
+          "id": "Reason",
+          "name": "Reason",
+          "description": ""
+        },
+        {
+          "id": "AdminName",
+          "name": "Admin Name",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "PermanentBanPlayer",
+        "text": "Permanently Ban Player",
+        "description": "Permanently ban a player from the server.",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Players",
+            "description": "",
+            "displayMember": "PlayerName",
+            "valueMember": "00000000000000000"
+          },
+          {
+            "iD": "Reason",
+            "name": "Reason",
+            "description": ""
+          },
+          {
+            "iD": "AdminName",
+            "name": "Admin Name",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "PunishPlayer",
+      "friendlyName": "Punish Player",
+      "description": "惩罚指定玩家（立即击杀）",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Players",
+          "description": ""
+        },
+        {
+          "id": "Reason",
+          "name": "Reason",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "PunishPlayer",
+        "text": "Punish Player",
+        "description": "Select a player to punish by killing.",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Players",
+            "description": "",
+            "displayMember": "PlayerName",
+            "valueMember": "00000000000000000"
+          },
+          {
+            "iD": "Reason",
+            "name": "Reason",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemoveAdmin",
+      "friendlyName": "Remove Admin",
+      "description": "移除指定玩家的管理员权限",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Player Id",
+          "description": "",
+          "values": [
+            "50000",
+            "60000"
+          ]
+        }
+      ],
+      "raw": {
+        "name": "RemoveAdmin",
+        "text": "Remove Admin",
+        "description": "Remove player from admin privileges.",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Player Id",
+            "description": "",
+            "displayMember": "50000,60000",
+            "valueMember": "50000,60000"
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemoveBannedWords",
+      "friendlyName": "Remove Banned Words",
+      "description": "从脏话过滤器中移除敏感词，多个词用英文逗号分隔",
+      "parameters": [
+        {
+          "id": "BannedWords",
+          "name": "Banned Words",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "RemoveBannedWords",
+        "text": "Remove Banned Words",
+        "description": "Remove banned words from the profanity filter. Separate words with commas.",
+        "dialogueParameters": [
+          {
+            "iD": "BannedWords",
+            "name": "Banned Words",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemoveMapFromRotation",
+      "friendlyName": "Remove Map From Rotation",
+      "description": "从地图轮换列表中移除指定位置的地图",
+      "parameters": [
+        {
+          "id": "Index",
+          "name": "At Index",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "RemoveMapFromRotation",
+        "text": "Remove Map From Rotation",
+        "description": "Remove map from the map rotation at an index.",
+        "dialogueParameters": [
+          {
+            "iD": "Index",
+            "name": "At Index",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemoveMapFromSequence",
+      "friendlyName": "Remove Map From Sequence",
+      "description": "从服务器地图播放队列中移除地图",
+      "parameters": [
+        {
+          "id": "Index",
+          "name": "At Index",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "RemoveMapFromSequence",
+        "text": "Remove Map From Sequence",
+        "description": "Remove map from the server map sequence.",
+        "dialogueParameters": [
+          {
+            "iD": "Index",
+            "name": "At Index",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemoveMatchTimer",
+      "friendlyName": "Remove Match Timer",
+      "description": "移除指定游戏模式的比赛时长覆盖，恢复默认值",
+      "parameters": [
+        {
+          "id": "GameMode",
+          "name": "Game Mode",
+          "description": "",
+          "values": [
+            "Warfare",
+            "Offensive",
+            "Skirmish",
+            "Conquest"
+          ]
+        }
+      ],
+      "raw": {
+        "name": "RemoveMatchTimer",
+        "text": "Remove Match Timer",
+        "description": "Remove the match timer override for a specific game-mode.",
+        "dialogueParameters": [
+          {
+            "iD": "GameMode",
+            "name": "Game Mode",
+            "description": "",
+            "displayMember": "Warfare,Offensive,Skirmish,Conquest",
+            "valueMember": "Warfare,Offensive,Skirmish,Conquest"
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemovePermanentBan",
+      "friendlyName": "Remove Permanent Ban",
+      "description": "解除指定玩家的永久封禁",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Players",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "RemovePermanentBan",
+        "text": "Remove Permanent Ban",
+        "description": "Remove permanent ban on a player",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Players",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemovePlayerFromPlatoon",
+      "friendlyName": "Remove Player From Platoon",
+      "description": "将指定玩家移出其当前小队",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Players",
+          "description": ""
+        },
+        {
+          "id": "Reason",
+          "name": "Reason",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "RemovePlayerFromPlatoon",
+        "text": "Remove Player From Platoon",
+        "description": "Removes a player from their current platoon.",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Players",
+            "description": "",
+            "displayMember": "PlayerName",
+            "valueMember": "00000000000000000"
+          },
+          {
+            "iD": "Reason",
+            "name": "Reason",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemoveTemporaryBan",
+      "friendlyName": "Remove Temporary Ban",
+      "description": "解除指定玩家的临时封禁",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Players",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "RemoveTemporaryBan",
+        "text": "Remove Temporary Ban",
+        "description": "Remove a temporary ban from a player.",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Players",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemoveVip",
+      "friendlyName": "Remove VIP",
+      "description": "移除指定玩家的 VIP 身份",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Player ID",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "RemoveVip",
+        "text": "Remove VIP",
+        "description": "Remove VIP status from a player.",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Player ID",
+            "description": "",
+            "displayMember": "123",
+            "valueMember": "123"
+          }
+        ]
+      }
+    },
+    {
+      "command": "RemoveWarmupTimer",
+      "friendlyName": "Remove Warmup Timer",
+      "description": "移除指定游戏模式的热身时间覆盖，恢复默认值",
+      "parameters": [
+        {
+          "id": "GameMode",
+          "name": "Game Mode",
+          "description": "",
+          "values": [
+            "Warfare",
+            "Skirmish",
+            "Conquest"
+          ]
+        }
+      ],
+      "raw": {
+        "name": "RemoveWarmupTimer",
+        "text": "Remove Warmup Timer",
+        "description": "Remove warmup timer override for a specific game mode.",
+        "dialogueParameters": [
+          {
+            "iD": "GameMode",
+            "name": "Game Mode",
+            "description": "",
+            "displayMember": "Warfare,Skirmish,Conquest",
+            "valueMember": "Warfare,Skirmish,Conquest"
+          }
+        ]
+      }
+    },
+    {
+      "command": "ResetVoteKickThreshold",
+      "friendlyName": "Reset Vote to Kick Threshold",
+      "description": "重置投票踢人阈值为默认值",
+      "parameters": null,
+      "raw": {
+        "name": "ResetVoteKickThreshold",
+        "text": "Reset Vote to Kick Threshold",
+        "description": "Remove custom vote to kick thresholds and revert to default."
+      }
+    },
+    {
+      "command": "ServerBroadcast",
+      "friendlyName": "Server Broadcast",
+      "description": "向服务器发送全局广播消息",
+      "parameters": [
+        {
+          "id": "Message",
+          "name": "Broadcast Message",
+          "description": "",
+          "constraints": {
+            "hint": "fire-and-forget: 服务器不返回响应，发送即视为成功"
+          }
+        }
+      ],
+      "raw": {
+        "name": "ServerBroadcast",
+        "text": "Server Broadcast",
+        "description": "Create a message to broadcast to the server.",
+        "dialogueParameters": [
+          {
+            "iD": "Message",
+            "name": "Broadcast Message",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetAutoBalanceEnabled",
+      "friendlyName": "Set Auto Balance Enabled",
+      "description": "启用或禁用队伍自动平衡",
+      "parameters": [
+        {
+          "id": "Enable",
+          "name": "Set Auto Balance",
+          "description": "",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ],
+      "raw": {
+        "name": "SetAutoBalanceEnabled",
+        "text": "Set Auto Balance Enabled",
+        "description": "Enable or disable the auto balance.",
+        "dialogueParameters": [
+          {
+            "iD": "Enable",
+            "name": "Set Auto Balance",
+            "description": "",
+            "displayMember": "On,Off",
+            "valueMember": "true,false"
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetAutoBalanceThreshold",
+      "friendlyName": "Set Auto Balance Threshold",
+      "description": "设置自动平衡触发的人数差值阈值",
+      "parameters": [
+        {
+          "id": "AutoBalanceThreshold",
+          "name": "SetAutoAutoBalance",
+          "description": "",
+          "constraints": {
+            "min": 0,
+            "max": 10,
+            "hint": "双方人数差触发自动平衡的阈值"
+          }
+        }
+      ],
+      "raw": {
+        "name": "SetAutoBalanceThreshold",
+        "text": "Set Auto Balance Threshold",
+        "description": "Set the threshold value for teams when using auto balance.",
+        "dialogueParameters": [
+          {
+            "iD": "AutoBalanceThreshold",
+            "name": "SetAutoAutoBalance",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetDynamicWeatherEnabled",
+      "friendlyName": "Set Dynamic Weather Enabled",
+      "description": "启用或禁用指定地图的动态天气效果",
+      "parameters": [
+        {
+          "id": "MapId",
+          "name": "Map ID",
+          "description": "",
+          "values": [
+            "hurtgenforest_warfare_V2",
+            "stmariedumont_warfare",
+            "foy_warfare",
+            "utahbeach_warfare",
+            "stmereeglise_warfare",
+            "hill400_warfare",
+            "carentan_warfare",
+            "kursk_warfare",
+            "omahabeach_warfare",
+            "driel_warfare",
+            "elalamein_warfare"
+          ]
+        },
+        {
+          "id": "Enable",
+          "name": "Enable",
+          "description": "",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ],
+      "raw": {
+        "name": "SetDynamicWeatherEnabled",
+        "text": "Set Dynamic Weather Enabled",
+        "description": "Enable or disable dynamic weather for a specific map.",
+        "dialogueParameters": [
+          {
+            "iD": "MapId",
+            "name": "Map ID",
+            "description": "",
+            "displayMember": "hurtgenforest_warfare_V2,stmariedumont_warfare,foy_warfare,utahbeach_warfare,stmereeglise_warfare,hill400_warfare,carentan_warfare,kursk_warfare,omahabeach_warfare,driel_warfare,elalamein_warfare",
+            "valueMember": "hurtgenforest_warfare_V2,stmariedumont_warfare,foy_warfare,utahbeach_warfare,stmereeglise_warfare,hill400_warfare,carentan_warfare,kursk_warfare,omahabeach_warfare,driel_warfare,elalamein_warfare"
+          },
+          {
+            "iD": "Enable",
+            "name": "Enable",
+            "description": "",
+            "displayMember": "On,Off",
+            "valueMember": "true,false"
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetHighPingThreshold",
+      "friendlyName": "Set High Ping Threshold",
+      "description": "设置高延迟踢人阈值（毫秒）",
+      "parameters": [
+        {
+          "id": "HighPingThresholdMs",
+          "name": "SetHighPingThreshold",
+          "description": "",
+          "constraints": {
+            "min": 0,
+            "max": 50000,
+            "hint": "毫秒；0=关闭高Ping踢人"
+          }
+        }
+      ],
+      "raw": {
+        "name": "SetHighPingThreshold",
+        "text": "Set High Ping Threshold",
+        "description": "Set the ping (in ms) that is considered too high for smooth gameplay.",
+        "dialogueParameters": [
+          {
+            "iD": "HighPingThresholdMs",
+            "name": "SetHighPingThreshold",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetIdleKickDuration",
+      "friendlyName": "Set Idle Kick Duration",
+      "description": "设置玩家挂机踢出等待时长（分钟）",
+      "parameters": [
+        {
+          "id": "IdleTimeoutMinutes",
+          "name": "Set Idle Kick Duration in Minutes",
+          "description": "",
+          "constraints": {
+            "min": 1,
+            "max": 184,
+            "hint": "分钟；服务器硬限制最大约 184 分钟"
+          }
+        }
+      ],
+      "raw": {
+        "name": "SetIdleKickDuration",
+        "text": "Set Idle Kick Duration",
+        "description": "Set how long a player can be idle before being kicked.",
+        "dialogueParameters": [
+          {
+            "iD": "IdleTimeoutMinutes",
+            "name": "Set Idle Kick Duration in Minutes",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetMapShuffleEnabled",
+      "friendlyName": "Set Map Shuffle Enabled",
+      "description": "启用或禁用地图队列随机排序",
+      "parameters": [
+        {
+          "id": "Enable",
+          "name": "Enable Map Shuffle",
+          "description": "",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ],
+      "raw": {
+        "name": "SetMapShuffleEnabled",
+        "text": "Set Map Shuffle Enabled",
+        "description": "Randomises the server map queue",
+        "dialogueParameters": [
+          {
+            "iD": "Enable",
+            "name": "Enable Map Shuffle",
+            "description": "",
+            "displayMember": "On,Off",
+            "valueMember": "true,false"
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetMatchTimer",
+      "friendlyName": "Set Match Timer",
+      "description": "设置指定游戏模式的比赛时长（分钟）。Warfare: 30~180，Offensive: 10~60/每点，Skirmish: 10~60",
+      "parameters": [
+        {
+          "id": "GameMode",
+          "name": "Game Mode",
+          "description": "",
+          "values": [
+            "Warfare",
+            "Offensive",
+            "Skirmish",
+            "Conquest"
+          ]
+        },
+        {
+          "id": "MatchLength",
+          "name": "Match Length (Minutes)",
+          "description": "",
+          "constraints": {
+            "values": [
+              "10",
+              "30",
+              "45",
+              "60",
+              "90",
+              "120",
+              "180"
+            ],
+            "hint": "分钟；实际可用值因服务器配置而异"
+          }
+        }
+      ],
+      "raw": {
+        "name": "SetMatchTimer",
+        "text": "Set Match Timer",
+        "description": "Configure the match length in minutes for a specific game-mode. Warfare can be between 30 - 180 minutes. Offensive can be between 10 - 60 minutes per capture point. Skirmish can be between 10 - 60 minutes",
+        "dialogueParameters": [
+          {
+            "iD": "GameMode",
+            "name": "Game Mode",
+            "description": "",
+            "displayMember": "Warfare,Offensive,Skirmish,Conquest",
+            "valueMember": "Warfare,Offensive,Skirmish,Conquest"
+          },
+          {
+            "iD": "MatchLength",
+            "name": "Match Length (Minutes)",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetMaxQueuedPlayers",
+      "friendlyName": "Set Max Queued Players",
+      "description": "设置服务器最大排队玩家数",
+      "parameters": [
+        {
+          "id": "MaxQueuedPlayers",
+          "name": "Set Max Queued Players",
+          "description": "",
+          "constraints": {
+            "min": 0,
+            "max": 20,
+            "hint": "允许范围 0-20，默认 6"
+          }
+        }
+      ],
+      "raw": {
+        "name": "SetMaxQueuedPlayers",
+        "text": "Set Max Queued Players",
+        "description": "Set the maximum number of queued players.",
+        "dialogueParameters": [
+          {
+            "iD": "MaxQueuedPlayers",
+            "name": "Set Max Queued Players",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetSectorLayout",
+      "friendlyName": "Set Sector Layout",
+      "description": "配置当前地图的活跃战区布局",
+      "parameters": [
+        {
+          "id": "Sector_1",
+          "name": "Sector 1",
+          "description": "",
+          "values": [
+            "ARTILLERY POSITION",
+            "GRUSHKI",
+            "GRUSHKI FLANK"
+          ],
+          "constraints": {
+            "hint": "据点名称；数量因地图而异。错误格式可能导致服务器异常"
+          }
+        },
+        {
+          "id": "Sector_2",
+          "name": "Sector 2",
+          "description": "",
+          "values": [
+            "PANZER'S END",
+            "DEFENCE IN DEPTH",
+            "LISTENING POST"
+          ]
+        },
+        {
+          "id": "Sector_3",
+          "name": "Sector 3",
+          "description": "",
+          "values": [
+            "THE WINDMILLS",
+            "YAMKI",
+            "OLEG'S HOUSE"
+          ]
+        },
+        {
+          "id": "Sector_4",
+          "name": "Sector 4",
+          "description": "",
+          "values": [
+            "RUDNO",
+            "DESTROYED BATTERY",
+            "THE MUDDY CHURN"
+          ]
+        },
+        {
+          "id": "Sector_5",
+          "name": "Sector 5",
+          "description": "",
+          "values": [
+            "ROAD TO KURSK",
+            "AMMO DUMP",
+            "EASTERN POSITION"
+          ]
+        }
+      ],
+      "raw": {
+        "name": "SetSectorLayout",
+        "text": "Set Sector Layout",
+        "description": "Configure the active sector layout",
+        "dialogueParameters": [
+          {
+            "iD": "Sector_1",
+            "name": "Sector 1",
+            "description": "",
+            "displayMember": "ARTILLERY POSITION,GRUSHKI,GRUSHKI FLANK",
+            "valueMember": "ARTILLERY POSITION,GRUSHKI,GRUSHKI FLANK"
+          },
+          {
+            "iD": "Sector_2",
+            "name": "Sector 2",
+            "description": "",
+            "displayMember": "PANZER'S END,DEFENCE IN DEPTH,LISTENING POST",
+            "valueMember": "PANZER'S END,DEFENCE IN DEPTH,LISTENING POST"
+          },
+          {
+            "iD": "Sector_3",
+            "name": "Sector 3",
+            "description": "",
+            "displayMember": "THE WINDMILLS,YAMKI,OLEG'S HOUSE",
+            "valueMember": "THE WINDMILLS,YAMKI,OLEG'S HOUSE"
+          },
+          {
+            "iD": "Sector_4",
+            "name": "Sector 4",
+            "description": "",
+            "displayMember": "RUDNO,DESTROYED BATTERY,THE MUDDY CHURN",
+            "valueMember": "RUDNO,DESTROYED BATTERY,THE MUDDY CHURN"
+          },
+          {
+            "iD": "Sector_5",
+            "name": "Sector 5",
+            "description": "",
+            "displayMember": "ROAD TO KURSK,AMMO DUMP,EASTERN POSITION",
+            "valueMember": "ROAD TO KURSK,AMMO DUMP,EASTERN POSITION"
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetTeamSwitchCooldown",
+      "friendlyName": "Set Team Switch Cooldown",
+      "description": "设置换队冷却时间",
+      "parameters": [
+        {
+          "id": "TeamSwitchTimer",
+          "name": "Team Switch Timer",
+          "description": "",
+          "constraints": {
+            "min": 0,
+            "max": 3600,
+            "hint": "秒，0=无冷却；大值可能被服务器拒绝"
+          }
+        }
+      ],
+      "raw": {
+        "name": "SetTeamSwitchCooldown",
+        "text": "Set Team Switch Cooldown",
+        "description": "Set cooldown time for team switching.",
+        "dialogueParameters": [
+          {
+            "iD": "TeamSwitchTimer",
+            "name": "Team Switch Timer",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetVipSlotCount",
+      "friendlyName": "Set VIP Slot Count",
+      "description": "设置服务器 VIP 预留槽位数量",
+      "parameters": [
+        {
+          "id": "VipSlotCount",
+          "name": "VIP Slot Count",
+          "description": "",
+          "constraints": {
+            "min": 0,
+            "max": 20,
+            "hint": "VIP 预留位数量"
+          }
+        }
+      ],
+      "raw": {
+        "name": "SetVipSlotCount",
+        "text": "Set VIP Slot Count",
+        "description": "Set the VIP slot count for the server.",
+        "dialogueParameters": [
+          {
+            "iD": "VipSlotCount",
+            "name": "VIP Slot Count",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetVoteKickEnabled",
+      "friendlyName": "Set Vote to Kick Enabled",
+      "description": "启用或禁用投票踢人功能",
+      "parameters": [
+        {
+          "id": "Enable",
+          "name": "Enable",
+          "description": "",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ],
+      "raw": {
+        "name": "SetVoteKickEnabled",
+        "text": "Set Vote to Kick Enabled",
+        "description": "Enable or disable the vote to kick functionality.",
+        "dialogueParameters": [
+          {
+            "iD": "Enable",
+            "name": "Enable",
+            "description": "",
+            "displayMember": "On,Off",
+            "valueMember": "true,false"
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetVoteKickThreshold",
+      "friendlyName": "Set Vote to Kick Threshold",
+      "description": "设置投票踢人通过阈值",
+      "parameters": [
+        {
+          "id": "ThresholdValue",
+          "name": "Threshold (Format: Player Count, Threshold ...)",
+          "description": "",
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "hint": "投票踢人所需票数，有服务器最小限制"
+          }
+        }
+      ],
+      "raw": {
+        "name": "SetVoteKickThreshold",
+        "text": "Set Vote to Kick Threshold",
+        "description": "Set the vote to kick threshold.",
+        "dialogueParameters": [
+          {
+            "iD": "ThresholdValue",
+            "name": "Threshold (Format: Player Count, Threshold ...)",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetWarmupTimer",
+      "friendlyName": "Set Warmup Timer",
+      "description": "设置指定游戏模式的热身时长（1~10 分钟）",
+      "parameters": [
+        {
+          "id": "GameMode",
+          "name": "Game Mode",
+          "description": "",
+          "values": [
+            "Warfare",
+            "Skirmish",
+            "Conquest"
+          ]
+        },
+        {
+          "id": "WarmupLength",
+          "name": "Warmup Timer Length (Minutes)",
+          "description": "",
+          "constraints": {
+            "values": [
+              "5",
+              "10",
+              "15",
+              "30"
+            ],
+            "hint": "分钟；实际可用值因服务器配置而异"
+          }
+        }
+      ],
+      "raw": {
+        "name": "SetWarmupTimer",
+        "text": "Set Warmup Timer",
+        "description": "Override the length of the warmup timer for a specific game-mode between 1 to 10 minutes.",
+        "dialogueParameters": [
+          {
+            "iD": "GameMode",
+            "name": "Game Mode",
+            "description": "",
+            "displayMember": "Warfare,Skirmish,Conquest",
+            "valueMember": "Warfare,Skirmish,Conquest"
+          },
+          {
+            "iD": "WarmupLength",
+            "name": "Warmup Timer Length (Minutes)",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "SetWelcomeMessage",
+      "friendlyName": "Set Welcome Message",
+      "description": "设置服务器欢迎消息",
+      "parameters": [
+        {
+          "id": "Message",
+          "name": "Server Message",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "SetWelcomeMessage",
+        "text": "Set Welcome Message",
+        "description": "Send a message to the server.",
+        "dialogueParameters": [
+          {
+            "iD": "Message",
+            "name": "Server Message",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "command": "TemporaryBanPlayer",
+      "friendlyName": "Temporary Ban Player",
+      "description": "临时封禁指定玩家，可设置封禁时长",
+      "parameters": [
+        {
+          "id": "PlayerId",
+          "name": "Players",
+          "description": ""
+        },
+        {
+          "id": "Duration",
+          "name": "Duration (Hours)",
+          "description": ""
+        },
+        {
+          "id": "Reason",
+          "name": "Reason",
+          "description": ""
+        },
+        {
+          "id": "AdminName",
+          "name": "Admin Name",
+          "description": ""
+        }
+      ],
+      "raw": {
+        "name": "TemporaryBanPlayer",
+        "text": "Temporary Ban Player",
+        "description": "Temporary ban a player from the server",
+        "dialogueParameters": [
+          {
+            "iD": "PlayerId",
+            "name": "Players",
+            "description": "",
+            "displayMember": "PlayerName",
+            "valueMember": "00000000000000000"
+          },
+          {
+            "iD": "Duration",
+            "name": "Duration (Hours)",
+            "description": ""
+          },
+          {
+            "iD": "Reason",
+            "name": "Reason",
+            "description": ""
+          },
+          {
+            "iD": "AdminName",
+            "name": "Admin Name",
+            "description": ""
+          }
+        ]
+      }
+    }
+  ]
+}
